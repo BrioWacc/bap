@@ -18,8 +18,11 @@ int main() {
     std::cout << CheckIfNull(voidPtr) << '\n'
               << CheckIfNull(intPtr) << std::endl;
     
-    std::cout << CheckIfNull((void*) nullptr) << '\n'
-              << CheckIfNull((int*) nullptr) << std::endl;
+    void* legacyVoidPtr = 0;
+    int* legacyIntPtr = NULL;
+
+    std::cout << CheckIfNull(legacyVoidPtr) << '\n'
+              << CheckIfNull(legacyIntPtr) << std::endl;
 
     return 0;
 }
